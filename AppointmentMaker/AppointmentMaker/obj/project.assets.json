@@ -6239,11 +6239,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tallm\\source\\repos\\AppointmentMaker\\AppointmentMaker\\AppointmentMaker.csproj",
+      "projectUniqueName": "C:\\Users\\tallm\\OneDrive\\Documents\\GitHub\\ASP.NET-Core-Web-Development\\AppointmentMaker\\AppointmentMaker\\AppointmentMaker.csproj",
       "projectName": "AppointmentMaker",
-      "projectPath": "C:\\Users\\tallm\\source\\repos\\AppointmentMaker\\AppointmentMaker\\AppointmentMaker.csproj",
+      "projectPath": "C:\\Users\\tallm\\OneDrive\\Documents\\GitHub\\ASP.NET-Core-Web-Development\\AppointmentMaker\\AppointmentMaker\\AppointmentMaker.csproj",
       "packagesPath": "C:\\Users\\tallm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tallm\\source\\repos\\AppointmentMaker\\AppointmentMaker\\obj\\",
+      "outputPath": "C:\\Users\\tallm\\OneDrive\\Documents\\GitHub\\ASP.NET-Core-Web-Development\\AppointmentMaker\\AppointmentMaker\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -6301,7 +6301,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
