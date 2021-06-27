@@ -13,10 +13,24 @@ namespace Activity2.Controllers
     {
         public IActionResult Index()
         {
-            HardCodedSampleDataRepository hardCodedSampleDataRepository = new HardCodedSampleDataRepository();
+            ProductsDAO products = new ProductsDAO();
 
-            return View(hardCodedSampleDataRepository.GetAllProducts());
+            return View(products.GetAllProducts());
         }
+
+        public IActionResult SearchForm()
+        {
+            return View();
+        }
+
+        public IActionResult SearchResults(string searchTerm)
+        {
+            ProductsDAO products = new ProductsDAO();
+
+            List<ProductModel> productList = products.SearchProducts(searchTerm);
+            return View("index", productList);
+        }
+
 
         public IActionResult Message()
         {
