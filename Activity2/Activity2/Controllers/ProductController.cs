@@ -18,6 +18,36 @@ namespace Activity2.Controllers
             return View(products.GetAllProducts());
         }
 
+        public IActionResult ShowDetails(int id)
+        {
+            ProductsDAO products = new ProductsDAO();   //reference to our productDAO
+            ProductModel foundProduct = products.GetProductById(id);
+            return View(foundProduct);
+        }
+
+        public IActionResult Edit(int id)
+        {
+            ProductsDAO products = new ProductsDAO();   //reference to our productDAO
+            ProductModel foundProduct = products.GetProductById(id);
+            return View("ShowEdit", foundProduct);
+        }
+
+        public IActionResult ProcessEdit(ProductModel product)
+        {
+            ProductsDAO products = new ProductsDAO();   //reference to our productDAO
+            products.Update(product);
+            return View("Index", products.GetAllProducts());
+        }
+
+        public IActionResult Delete(int Id)
+        {
+            ProductsDAO products = new ProductsDAO();   //reference to our productDAO
+            ProductModel product = products.GetProductById(Id);
+            products.Delete(product);
+            return View("Index", products.GetAllProducts());
+        }
+
+
         public IActionResult SearchForm()
         {
             return View();

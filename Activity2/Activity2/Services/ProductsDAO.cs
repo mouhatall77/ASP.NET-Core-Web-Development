@@ -12,7 +12,36 @@ namespace Activity2.Services
         string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Test;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public int Delete(ProductModel product)
         {
-            throw new NotImplementedException();
+            int newIdNumber = -1;
+
+
+            //Prepared Sql statement where @name stand for any other item
+            string sqlStatement = "DELETE FROM dbo.Products WHERE Id = @Id";
+
+            //Section where we use connection to our sql database
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                //Create a command object. Sql command takes 2 params
+                SqlCommand command = new SqlCommand(sqlStatement, connection);
+
+                command.Parameters.AddWithValue("@Id", product.Id);
+
+
+                try
+                {
+
+                    connection.Open();
+                    newIdNumber = Convert.ToInt32(command.ExecuteScalar());
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
+
+            return newIdNumber;
         }
 
         public List<ProductModel> GetAllProducts()
@@ -55,7 +84,47 @@ namespace Activity2.Services
 
         public ProductModel GetProductById(int id)
         {
-            throw new NotImplementedException();
+            //
+            ProductModel foundProduct = null;
+
+            //Prepared Sql statement where @name stand for any other item
+            string sqlStatement = "SELECT * FROM dbo.Products WHERE Id = @Id";
+
+            //Section where we use connection to our sql database
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                //Create a command object. Sql command takes 2 params
+                SqlCommand command = new SqlCommand(sqlStatement, connection);
+
+                //Search term with wildcard before and after the term
+                command.Parameters.AddWithValue("@Id", id);
+
+
+                try
+                {
+                    connection.Open();
+
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        foundProduct = new ProductModel
+                        {
+                            Id = (int)reader[0],
+                            Name = (string)reader[1],
+                            Price = (decimal)reader[2],
+                            Description = (string)reader[3]
+                        };
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
+
+            return foundProduct;
         }
 
         public int Insert(ProductModel product)
@@ -110,7 +179,40 @@ namespace Activity2.Services
 
         public int Update(ProductModel product)
         {
-            throw new NotImplementedException();
+            int newIdNumber = -1;
+
+
+            //Prepared Sql statement where @name stand for any other item
+            string sqlStatement = "UPDATE dbo.Products SET Name = @Name, Price = @Price, Description = @Description WHERE Id = @Id";
+
+            //Section where we use connection to our sql database
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                //Create a command object. Sql command takes 2 params
+                SqlCommand command = new SqlCommand(sqlStatement, connection);
+
+                //Search term with wildcard before and after the term
+                command.Parameters.AddWithValue("@Name", product.Name);
+                command.Parameters.AddWithValue("@Price", product.Price);
+                command.Parameters.AddWithValue("@Description", product.Description);
+                command.Parameters.AddWithValue("@Id", product.Id);
+
+
+                try
+                {
+
+                    connection.Open();
+                    newIdNumber = Convert.ToInt32(command.ExecuteScalar());
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
+
+            return newIdNumber;
         }
     }
 }
