@@ -25,6 +25,20 @@ namespace Activity2.Controllers
             return View(foundProduct);
         }
 
+        public IActionResult Create(int id)
+        {
+            ProductsDAO products = new ProductsDAO();   //reference to our productDAO
+            ProductModel foundProduct = products.GetProductById(id);
+            return View("ShowCreate", foundProduct);
+        }
+
+        public IActionResult ProcessCreate(ProductModel product)
+        {
+            ProductsDAO products = new ProductsDAO();   //reference to our productDAO
+            products.Insert(product);
+            return View("Index", products.GetAllProducts());
+        }
+
         public IActionResult Edit(int id)
         {
             ProductsDAO products = new ProductsDAO();   //reference to our productDAO
