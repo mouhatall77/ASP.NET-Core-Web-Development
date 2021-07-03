@@ -27,7 +27,7 @@ namespace Activity2.Controllers
 
         public IActionResult Create()
         {
-            return View("ShowCreate");
+            return View("Create");
         }
 
         public IActionResult ProcessCreate(ProductModel product)
