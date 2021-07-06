@@ -1,1 +1,1 @@
-A login form and vslidation with associated controller and SQL database. 
+A login form and validation with associated controller and SQL database. 
