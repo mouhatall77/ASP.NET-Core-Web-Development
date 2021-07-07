@@ -367,3 +367,4 @@ C:\Users\tallm\OneDrive\Documents\GitHub\ASP.NET-Core-Web-Development\Activity2\
 C:\Users\tallm\OneDrive\Documents\GitHub\ASP.NET-Core-Web-Development\Activity2\Activity2\obj\Debug\net5.0\Razor\Views\Shared\_navbar.cshtml.g.cs
 C:\Users\tallm\OneDrive\Documents\GitHub\ASP.NET-Core-Web-Development\Activity2\Activity2\obj\Debug\net5.0\Razor\Views\Product\ShowDetails.cshtml.g.cs
 C:\Users\tallm\OneDrive\Documents\GitHub\ASP.NET-Core-Web-Development\Activity2\Activity2\obj\Debug\net5.0\Razor\Views\Product\ShowEdit.cshtml.g.cs
+C:\Users\tallm\OneDrive\Documents\GitHub\ASP.NET-Core-Web-Development\Activity2\Activity2\obj\Debug\net5.0\Razor\Views\Product\Create.cshtml.g.cs

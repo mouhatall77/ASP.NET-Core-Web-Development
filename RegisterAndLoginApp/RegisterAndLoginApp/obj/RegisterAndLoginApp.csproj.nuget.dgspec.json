@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tallm\\source\\repos\\RegisterAndLoginApp\\RegisterAndLoginApp\\RegisterAndLoginApp.csproj": {}
+    "C:\\Users\\tallm\\OneDrive\\Documents\\GitHub\\ASP.NET-Core-Web-Development\\RegisterAndLoginApp\\RegisterAndLoginApp\\RegisterAndLoginApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tallm\\source\\repos\\RegisterAndLoginApp\\RegisterAndLoginApp\\RegisterAndLoginApp.csproj": {
+    "C:\\Users\\tallm\\OneDrive\\Documents\\GitHub\\ASP.NET-Core-Web-Development\\RegisterAndLoginApp\\RegisterAndLoginApp\\RegisterAndLoginApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tallm\\source\\repos\\RegisterAndLoginApp\\RegisterAndLoginApp\\RegisterAndLoginApp.csproj",
+        "projectUniqueName": "C:\\Users\\tallm\\OneDrive\\Documents\\GitHub\\ASP.NET-Core-Web-Development\\RegisterAndLoginApp\\RegisterAndLoginApp\\RegisterAndLoginApp.csproj",
         "projectName": "RegisterAndLoginApp",
-        "projectPath": "C:\\Users\\tallm\\source\\repos\\RegisterAndLoginApp\\RegisterAndLoginApp\\RegisterAndLoginApp.csproj",
+        "projectPath": "C:\\Users\\tallm\\OneDrive\\Documents\\GitHub\\ASP.NET-Core-Web-Development\\RegisterAndLoginApp\\RegisterAndLoginApp\\RegisterAndLoginApp.csproj",
         "packagesPath": "C:\\Users\\tallm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tallm\\source\\repos\\RegisterAndLoginApp\\RegisterAndLoginApp\\obj\\",
+        "outputPath": "C:\\Users\\tallm\\OneDrive\\Documents\\GitHub\\ASP.NET-Core-Web-Development\\RegisterAndLoginApp\\RegisterAndLoginApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
